@@ -1,0 +1,101 @@
+body {
+    background:linear-gradient(to right, #cb232c, #ce1d61);
+    color:#ffffff;
+    position: relative;
+}
+header {
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+}
+h1 {
+    font-size: 4em;
+    text-align: left;
+    color: #ffffff;
+}
+.header-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+h2 {
+    font-size: 2em;
+    text-align: left;
+    color: #ffffff;
+    margin-left: 40px;
+}
+h3 {
+    font-size: 30px;
+    text-align: left;
+    color: #ffffff;
+    margin-left: 40px;
+}
+p{
+    font-size: 20px;
+    text-align: left;
+    color: #ffffff;
+    margin-left: 40px;
+}
+.main-info {
+    background-color: #cf8080; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    margin: 30px 10px; /* Margen exterior */
+    border-radius: 30px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+.main-info-img {
+    display: flex; /* Activa Flexbox para alinear elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Ajusta esto según necesites para el espaciado */
+}
+.p-icon {
+    margin-left: 50px; 
+    margin-right: 50px;
+    width: 150px; /* Ajusta esto según el tamaño deseado para la imagen */
+    height: 150px; /* Mantiene la proporción de la imagen */
+    border-radius: 15px; /* Bordes redondeados */
+}
+.list-containt {
+    display: flex; /* Activa Flexbox para alinear elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    
+}
+.list-item {
+    background-color: #cf8080; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    margin: 10px 10px; /* Margen exterior */
+    border-radius: 30px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+.container1 {
+    display: flex;
+}
+.aside-content{
+    background-color: #cf8080; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    margin: 30px 10px; /* Margen exterior */
+    border-radius: 30px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+.link-aside a {
+    display: inline-block; /* Hace que el enlace se comporte como un bloque, permitiendo aplicar padding */
+    background-color: #ffffff; /* Fondo blanco */
+    color: #806059; /* Texto negro, ajusta según necesites */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 20px; /* Tamaño del texto, ya especificado */
+    padding: 10px 20px; /* Espaciado interno, ajusta según necesites */
+    margin: 5px; /* Margen entre botones, ajusta según necesites */
+    border-radius: 5px; /* Bordes redondeados, ajusta según necesites */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.link-aside a:hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo al pasar el mouse, ajusta según necesites */
+}
+.init-session {
+    position: absolute;
+    top:10;
+    right: 0;
+    margin: 5px 10px;
+}
