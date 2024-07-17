@@ -1,101 +1,218 @@
+/* Importo la fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+/* Reseteo de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%; /* Usa un punto decimal en lugar de una coma */
+}
+/* Estilos generales */
 body {
-    background:linear-gradient(to right, #cb232c, #ce1d61);
-    color:#ffffff;
-    position: relative;
+    background: linear-gradient(to right, #cb232c, #ce1d61);
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 header {
     display: flex;
-    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center; /* Centra verticalmente */
+    padding: 1rem 2rem; /* Espaciado interno */
+}
+.header__content {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    flex: 1; /* Ocupa todo el espacio disponible */
+}
+
+.header__nav {
+    display: flex;
+    gap: 2.25rem; /* Espaciado entre los enlaces, 75% de 3rem */
+    margin-right: 2rem;
+    margin-left: 1rem;
+}
+
+.header__nav a {
+    font-family: "ABeeZee", sans-serif;
+    color: #ffffff; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 2rem; /* Tamaño del texto, 75% de 3rem */
+    transition: color 0.3s; /* Transición suave del color del texto */
+}
+
+.header__nav a:hover {
+    color: #f0f0f0; /* Color del texto al pasar el mouse */
 }
 h1 {
-    font-size: 4em;
+    font-family: "Source Code Pro", monospace;
+    font-size: 6rem; /* Tamaño del texto, 75% de 8rem */
     text-align: left;
     color: #ffffff;
+    margin-right: 3rem;
 }
-.header-icon {
-    width: 100px;
-    height: 100px;
-    border-radius: 12px;
-    margin-right: 40px;
-    margin-left: 40px;
+.header__icon {
+    width: 9.75rem; /* Tamaño del icono, 75% de 13rem */
+    height: 9.75rem; /* Tamaño del icono, 75% de 13rem */
+    border-radius: 1rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
 }
 h2 {
-    font-size: 2em;
+    font-family: "Roboto Mono", monospace;
+    font-size: 3em; /* Tamaño del texto, 75% de 4em */
     text-align: left;
     color: #ffffff;
-    margin-left: 40px;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 h3 {
-    font-size: 30px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 2.25rem; /* Tamaño del texto, 75% de 3rem */
     text-align: left;
     color: #ffffff;
-    margin-left: 40px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
 }
-p{
-    font-size: 20px;
+p {
+    font-family: "ABeeZee", sans-serif;
+    font-size: 1.95rem; /* Tamaño del texto, 75% de 2.6rem */
     text-align: left;
-    color: #ffffff;
-    margin-left: 40px;
+    color: #faedef;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    line-height: 3rem;
 }
-.main-info {
-    background-color: #cf8080; /* Color de fondo */
-    padding: 20px; /* Espaciado interno */
-    margin: 30px 10px; /* Margen exterior */
-    border-radius: 30px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+.main__info {
+    background-color: #ba6868; /* Color de fondo */
+    padding: 1.5rem; /* Espaciado interno, 75% de 2rem */
+    margin: 3rem 3rem; /* Margen exterior, 75% de 4rem */
+    border-radius: 2rem; /* Bordes redondeados */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera, 75% de 0 4px 8px */
 }
-.main-info-img {
+.main__info-img {
     display: flex; /* Activa Flexbox para alinear elementos horizontalmente */
     align-items: center; /* Centra los elementos verticalmente */
     justify-content: space-between; /* Ajusta esto según necesites para el espaciado */
 }
-.p-icon {
-    margin-left: 50px; 
-    margin-right: 50px;
-    width: 150px; /* Ajusta esto según el tamaño deseado para la imagen */
-    height: 150px; /* Mantiene la proporción de la imagen */
-    border-radius: 15px; /* Bordes redondeados */
+.p__icon {
+    margin-left: 3rem; /* Margen, 75% de 4rem */
+    margin-right: 3rem; /* Margen, 75% de 4rem */
+    width: 13.5rem; /* Tamaño del icono, 75% de 18rem */
+    height: 13.5rem; /* Tamaño del icono, 75% de 18rem */
+    border-radius: 1.4rem; /* Bordes redondeados */
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
 }
-.list-containt {
+.list__containt {
     display: flex; /* Activa Flexbox para alinear elementos horizontalmente */
     align-items: center; /* Centra los elementos verticalmente */
-    
+    margin-left: 1.5rem; /* Margen, 75% de 2rem */
+    margin-right: 1.5rem; /* Margen, 75% de 2rem */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples líneas si es necesario */
 }
-.list-item {
-    background-color: #cf8080; /* Color de fondo */
-    padding: 20px; /* Espaciado interno */
-    margin: 10px 10px; /* Margen exterior */
-    border-radius: 30px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+.list__item {
+    font-family: "ABeeZee", sans-serif;
+    font-size: 1.8rem; /* Tamaño del texto, 75% de 2.6rem */
+    background-color: #ba6868; /* Color de fondo */
+    padding: 1.95rem; /* Espaciado interno, 75% de 2.6rem */
+    margin: 1.5rem 1.5rem; /* Margen exterior, 75% de 2rem */
+    border-radius: 2rem; /* Bordes redondeados */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra ligera, 75% de 0 4px 8px */
+    line-height: 3rem;
 }
-.container1 {
+.container__readapp {
     display: flex;
+    flex-direction: row; /* Disposición en línea horizontal */
 }
-.aside-content{
-    background-color: #cf8080; /* Color de fondo */
-    padding: 20px; /* Espaciado interno */
-    margin: 30px 10px; /* Margen exterior */
-    border-radius: 30px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+main {
+    flex: 3; /* Proporción de espacio ocupado por el main */
+    display: flex;
+    flex-direction: column;
 }
-.link-aside a {
-    display: inline-block; /* Hace que el enlace se comporte como un bloque, permitiendo aplicar padding */
+aside {
+    flex: 1; /* Proporción de espacio ocupado por el aside */
+    padding: 1.95rem; /* Espaciado interno, 75% de 2.6rem */
+    margin: 1rem 2rem; /* Margen exterior, 75% de 4rem */
+}
+.aside__content{
+    background-color: #ba6868; /* Color de fondo */
+    padding: 1.95rem; /* Espaciado interno, 75% de 2.6rem */
+    border-radius: 2rem; /* Bordes redondeados */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra ligera, 75% de 0 4px 8px */
+}
+    
+.link__aside {
+    display: flex; /* Activa flexbox para alinear los enlaces en línea */
+    gap: 1rem; /* Espacio entre enlaces */
+}
+
+.link__aside a {
+    font-family: "ABeeZee", sans-serif;
+    display: inline-flex; /* Cambia a inline-flex para alineación vertical centrada */
     background-color: #ffffff; /* Fondo blanco */
-    color: #806059; /* Texto negro, ajusta según necesites */
+    color: #806059; /* Texto negro */
     text-decoration: none; /* Elimina el subrayado del enlace */
-    font-size: 20px; /* Tamaño del texto, ya especificado */
-    padding: 10px 20px; /* Espaciado interno, ajusta según necesites */
-    margin: 5px; /* Margen entre botones, ajusta según necesites */
-    border-radius: 5px; /* Bordes redondeados, ajusta según necesites */
+    font-size: 1.8rem; /* Tamaño del texto */
+    padding: 1.05rem 1.5rem; /* Espaciado interno */
+    border-radius: 0.45rem; /* Bordes redondeados */
     transition: background-color 0.3s; /* Transición suave del color de fondo */
 }
 
-.link-aside a:hover {
+/* Si deseas mantener el margen, asegúrate de que no afecte la alineación */
+.link__aside a:not(:last-child) {
+    margin-right: 0.45rem; /* Margen solo a la derecha de los enlaces, evitando margen en el último */
+}
+
+.link__aside a:hover {
     background-color: #f0f0f0; /* Cambia el color de fondo al pasar el mouse, ajusta según necesites */
 }
-.init-session {
-    position: absolute;
-    top:10;
-    right: 0;
-    margin: 5px 10px;
+
+.init__session {
+    margin-left: auto; /* Empuja el contenido a la derecha */
+    display: flex; /* Activa flexbox para alinear los elementos en línea */
+    gap: 1rem; /* Espaciado entre los enlaces */
+}
+.text__resalt {
+    color: #ffffff;
+    font-weight: bold;
+}
+ul {
+    margin-left: 3rem; /* Margen, 75% de 4rem */
+    color: #faedef;
+}
+ol {
+    margin-left: 3rem; /* Margen, 75% de 4rem */
+    color: #faedef;
+}
+.list__line{
+    display: flex;
+}
+
+/* Media Queries para un diseño responsivo */
+@media (max-width: 768px) {
+    header, .header__content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .container__readapp {
+        flex-direction: column;
+    }
+    main, aside {
+        margin: 1.5rem; /* Margen, 75% de 2rem */
+        flex-basis: 100%; /* El aside ocupará el ancho completo en pantallas pequeñas */
+    }
+    .list__containt {
+        flex-direction: column;
+    }
 }
