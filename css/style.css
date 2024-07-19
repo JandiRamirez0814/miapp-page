@@ -1,34 +1,57 @@
-/* Importo la fuente*/
+/* Importo la fuente */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+
+/* Variables */
+:root{
+    --font-primary: 'Roboto Mono', monospace;
+    --font-secondary: 'Source Code Pro', monospace;
+    --font-tertiary: 'ABeeZee', sans-serif;
+    --color-primary: #cb232c;
+    --color-secondary: #ce1d61;
+    --color-tertiary: #ba6868;
+    --color-text: #ffffff;
+    --color-text-secondary: #faedef;
+    --color-text-tertiary: #806059;
+}
+
 /* Reseteo de estilos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     font-size: 62.5%; /* Usa un punto decimal en lugar de una coma */
 }
+
 /* Estilos generales */
 body {
-    background: linear-gradient(to right, #cb232c, #ce1d61);
-    color: #ffffff;
-    height: 100vh;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
 }
+
+/* Contenido del header */
 header {
     display: flex;
-    justify-content: space-between; /* Espaciado entre elementos */
-    align-items: center; /* Centra verticalmente */
-    padding: 1rem 2rem; /* Espaciado interno */
+    justify-content: space-between;
+    align-items: center; 
+    padding: 1rem 2rem; 
+    flex-wrap: wrap;
+    width: 100%;
 }
+
 .header__content {
     display: flex;
-    align-items: center; /* Alinea verticalmente */
+    align-items: center; 
     flex: 1; /* Ocupa todo el espacio disponible */
+    flex-wrap: wrap;
 }
 
 .header__nav {
@@ -36,183 +59,381 @@ header {
     gap: 2.25rem; /* Espaciado entre los enlaces, 75% de 3rem */
     margin-right: 2rem;
     margin-left: 1rem;
+    flex-wrap: wrap;
 }
 
 .header__nav a {
-    font-family: "ABeeZee", sans-serif;
-    color: #ffffff; /* Color del texto */
+    font-family: var(--font-tertiary);
+    color: var(--color-text); 
     text-decoration: none; /* Elimina el subrayado del enlace */
-    font-size: 2rem; /* Tamaño del texto, 75% de 3rem */
+    font-size: 2rem; 
     transition: color 0.3s; /* Transición suave del color del texto */
 }
 
 .header__nav a:hover {
-    color: #f0f0f0; /* Color del texto al pasar el mouse */
+    color: var(--color-text-secondary); /* Color del texto al pasar el mouse */
+    transform: scale(1.05);
+    cursor: pointer;
 }
+
 h1 {
-    font-family: "Source Code Pro", monospace;
-    font-size: 6rem; /* Tamaño del texto, 75% de 8rem */
+    font-family: var(--font-secondary);
+    font-size: 6rem; 
     text-align: left;
-    color: #ffffff;
+    color: var(--color-text);
     margin-right: 3rem;
 }
+
 .header__icon {
-    width: 9.75rem; /* Tamaño del icono, 75% de 13rem */
-    height: 9.75rem; /* Tamaño del icono, 75% de 13rem */
+    width: 9.75rem;
+    height: 9.75rem; 
     border-radius: 1rem;
     margin-right: 3rem;
     margin-left: 3rem;
 }
+
+/* Títulos estilos */
 h2 {
-    font-family: "Roboto Mono", monospace;
-    font-size: 3em; /* Tamaño del texto, 75% de 4em */
+    font-family: var(--font-primary);
+    font-size: 3em; 
     text-align: left;
-    color: #ffffff;
+    color: var(--color-text);
     margin-left: 3rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
 h3 {
-    font-family: "Roboto Mono", monospace;
-    font-size: 2.25rem; /* Tamaño del texto, 75% de 3rem */
+    font-family: var(--font-primary);
+    font-size: 2.25rem;
     text-align: left;
-    color: #ffffff;
+    color: var(--color-text);
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
 }
-p {
-    font-family: "ABeeZee", sans-serif;
+
+h4 {
+    font-family: var(--font-primary);
     font-size: 1.95rem; /* Tamaño del texto, 75% de 2.6rem */
     text-align: left;
-    color: #faedef;
+    color: var(--color-text-secondary);
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+p {
+    font-family: var(--font-tertiary);
+    font-size: 1.95rem; /* Tamaño del texto, 75% de 2.6rem */
+    text-align: left;
+    color: var(--color-text-secondary);
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
     line-height: 3rem;
 }
+
+/* Contenido del body */
 .main__info {
-    background-color: #ba6868; /* Color de fondo */
-    padding: 1.5rem; /* Espaciado interno, 75% de 2rem */
-    margin: 3rem 3rem; /* Margen exterior, 75% de 4rem */
-    border-radius: 2rem; /* Bordes redondeados */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera, 75% de 0 4px 8px */
+    background-color: var(--color-tertiary); 
+    padding: 1.5rem;
+    margin: 2rem 3rem; /* Centra el div horizontalmente */
+    border-radius: 2rem; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); 
+    width: 90%; /* Usa el 90% del ancho disponible */
+    overflow: hidden; /* Evita que el contenido se desborde */
 }
+
 .main__info-img {
-    display: flex; /* Activa Flexbox para alinear elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    justify-content: space-between; /* Ajusta esto según necesites para el espaciado */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+
+    width: 100%;
 }
-.p__icon {
-    margin-left: 3rem; /* Margen, 75% de 4rem */
-    margin-right: 3rem; /* Margen, 75% de 4rem */
-    width: 13.5rem; /* Tamaño del icono, 75% de 18rem */
-    height: 13.5rem; /* Tamaño del icono, 75% de 18rem */
-    border-radius: 1.4rem; /* Bordes redondeados */
-    margin-top: 0.8rem;
-    margin-bottom: 0.8rem;
+
+/* Iconos estilo */
+.p__icon, .p__icon2 {
+    width: 13.5rem; 
+    height: 13.5rem; 
+    border-radius: 1.4rem; 
+    margin: 0.8rem 3rem;
 }
+
+.p__icon2 {
+    margin-left: 7rem; 
+    margin-right: 7rem;
+}
+
+/* Contenido de los cuadros de listas */
 .list__containt {
-    display: flex; /* Activa Flexbox para alinear elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    margin-left: 1.5rem; /* Margen, 75% de 2rem */
-    margin-right: 1.5rem; /* Margen, 75% de 2rem */
-    flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples líneas si es necesario */
-}
-.list__item {
-    font-family: "ABeeZee", sans-serif;
-    font-size: 1.8rem; /* Tamaño del texto, 75% de 2.6rem */
-    background-color: #ba6868; /* Color de fondo */
-    padding: 1.95rem; /* Espaciado interno, 75% de 2.6rem */
-    margin: 1.5rem 1.5rem; /* Margen exterior, 75% de 2rem */
-    border-radius: 2rem; /* Bordes redondeados */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra ligera, 75% de 0 4px 8px */
-    line-height: 3rem;
-}
-.container__readapp {
     display: flex;
-    flex-direction: row; /* Disposición en línea horizontal */
+    align-items: center;
+    margin: 1rem 1rem; /* Centra horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples líneas si es necesario */
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border-radius: 2rem;
+    width: 100%; 
+    overflow: hidden; /* Evita que el contenido se desborde */
 }
+
+.list__item {
+    font-family: var(--font-tertiary);
+    font-size: 1.8rem; 
+    background-color: var(--color-tertiary); 
+    padding: 1.95rem; 
+    margin: 1.5rem; 
+    margin-right: 0.5rem;
+    border-radius: 2rem; 
+    line-height: 3rem;
+    overflow: hidden;
+}
+
+/* Contenido del main donde está la info de la app */
+.container__readapp {
+    gap:2rem;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Secciones */
 main {
     flex: 3; /* Proporción de espacio ocupado por el main */
+    gap:2rem;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
+
 aside {
     flex: 1; /* Proporción de espacio ocupado por el aside */
-    padding: 1.95rem; /* Espaciado interno, 75% de 2.6rem */
-    margin: 1rem 2rem; /* Margen exterior, 75% de 4rem */
+    padding: 1.95rem; 
+    margin: 1rem 2rem; 
+    width: 100%;
 }
-.aside__content{
-    background-color: #ba6868; /* Color de fondo */
-    padding: 1.95rem; /* Espaciado interno, 75% de 2.6rem */
-    border-radius: 2rem; /* Bordes redondeados */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra ligera, 75% de 0 4px 8px */
+
+/* Estilos de los elementos del aside */
+.aside__content {
+    background-color: var(--color-tertiary); 
+    padding: 1.95rem;
+    border-radius: 2rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    overflow-x: hidden;
 }
-    
+
+/* Estilos de los botones */  
 .link__aside {
-    display: flex; /* Activa flexbox para alinear los enlaces en línea */
-    gap: 1rem; /* Espacio entre enlaces */
+    display: flex; 
+    gap: 1rem; 
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .link__aside a {
-    font-family: "ABeeZee", sans-serif;
+    font-family: var(--font-tertiary);
     display: inline-flex; /* Cambia a inline-flex para alineación vertical centrada */
-    background-color: #ffffff; /* Fondo blanco */
-    color: #806059; /* Texto negro */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    font-size: 1.8rem; /* Tamaño del texto */
-    padding: 1.05rem 1.5rem; /* Espaciado interno */
-    border-radius: 0.45rem; /* Bordes redondeados */
-    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    background-color: var(--color-text); 
+    color: var(--color-text-tertiary); 
+    text-decoration: none;
+    font-size: 1.8rem; 
+    padding: 1.05rem 1.5rem;
+    border-radius: 0.45rem; 
+    transition: background-color 0.3s; 
 }
 
-/* Si deseas mantener el margen, asegúrate de que no afecte la alineación */
 .link__aside a:not(:last-child) {
-    margin-right: 0.45rem; /* Margen solo a la derecha de los enlaces, evitando margen en el último */
+    margin-right: 0.45rem; /* se mantiene el margen a pesar de la alineación */
 }
 
 .link__aside a:hover {
-    background-color: #f0f0f0; /* Cambia el color de fondo al pasar el mouse, ajusta según necesites */
+    background-color: var(--color-text-secondary);
+    transform: scale(1.05); /* Aumenta el tamaño del elemento en un 5% */
+    cursor: pointer;
 }
 
+/* Botones del header */
 .init__session {
     margin-left: auto; /* Empuja el contenido a la derecha */
-    display: flex; /* Activa flexbox para alinear los elementos en línea */
-    gap: 1rem; /* Espaciado entre los enlaces */
+    display: flex; 
+    gap: 1rem; 
+    flex-wrap: wrap;
+    width: auto; /* Ajusta el ancho automáticamente */
 }
+
+/* Textos que deseo resaltar */
 .text__resalt {
-    color: #ffffff;
+    color: var(--color-text);
     font-weight: bold;
 }
+
+/* Estilos de las listas */
 ul {
-    margin-left: 3rem; /* Margen, 75% de 4rem */
-    color: #faedef;
+    margin-left: 3rem; 
+    color: var(--color-text-secondary);
+    width: 100%;
 }
+
 ol {
-    margin-left: 3rem; /* Margen, 75% de 4rem */
-    color: #faedef;
+    margin-left: 3rem;
+    color: var(--color-text-secondary);
+    width: 100%;
 }
-.list__line{
+li{
+    margin-right: 0.5rem;
+}
+
+.list__line {
     display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Iconos botones */
+.button__icon {
+    width: 25px; 
+    height: 25px;
+    margin-right: 0.45rem;
+}
+
+.button__content {
+    display: flex; 
+    gap: 0.4rem; 
+    align-items: center;
+}
+
+/* Footer estilos */
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer__content-firm {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    background-color: var(--color-tertiary);
+    padding: 1rem; /* Añade padding si es necesario */
+    text-align: center; /* Centra el texto */
+    width: 100%;
+}
+
+/* Estilos específicos para la página de versiones */
+.version__item li {
+    font-family: var(--font-tertiary);
+    font-size: 1.8rem;  
+    line-height: 3rem;
+    margin-left: 2rem;
+    width: 100%;
+}
+
+.creator__photo {
+    width: 10rem; 
+    height: 10rem; 
+    border-radius: 1rem; 
+    margin: 1rem 0;
+}
+
+.creator__info {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.creator__details {
+    display: flex;
+    align-items: center;
+}
+
+.creator__info-list {
+    display: flex;
+    margin: 3rem 2rem;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 /* Media Queries para un diseño responsivo */
-@media (max-width: 768px) {
+@media (max-width: 770px) {
     header, .header__content {
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
     }
+
     .container__readapp {
         flex-direction: column;
+        width: 90%;
     }
+
     main, aside {
         margin: 1.5rem; /* Margen, 75% de 2rem */
         flex-basis: 100%; /* El aside ocupará el ancho completo en pantallas pequeñas */
+        width: 100%;
     }
+
     .list__containt {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .header__icon, .p__icon, .p__icon2 {
+        width: 7rem;
+        height: 7rem;
+    }
+    .main__info-img {
+        flex-direction: column;
+    }
+    .aside__content-img{
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .header__nav a, h2, h3, h4 {
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1.5rem;
+        margin-right: 1.5%;
+    }
+    ul{
+        padding: 1.5%;
+        width: 90%;
+    } 
+    
+
+    .link__aside a {
+        font-size: 1.6rem;
+        padding: 1rem 1.4rem;
+    }
+
+    .list__item {
+        font-size: 1.6rem;
+        padding: 1.5rem;
+        margin: 1.5%;
+        margin-right: 1.5%;
+    }
+
+    .main__info {
+        margin: 1.5rem;
+        width: 90%;
+    }
+
+    .init__session {
+        margin-left: 0; /* Resetea el margen para pantallas pequeñas */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        justify-content: center; /* Centra los elementos */
     }
 }
